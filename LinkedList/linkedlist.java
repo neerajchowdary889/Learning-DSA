@@ -24,6 +24,22 @@ public class linkedlist {
         }
         return list;
     }
+    void deleteNode(int key){
+        Node temp = head;
+        Node prev = null;
+        if(temp != null && temp.data == key){
+            head = temp.next;
+            return;
+        }
+        while(temp != null && temp.data != key){
+            prev = temp;
+            temp = temp.next;
+        }
+        if (temp == null){
+            return;
+        }
+        prev.next = temp.next;
+    }
     public static void Print(linkedlist list){
         Node currNode = list.head;
         while(currNode != null){
@@ -33,12 +49,17 @@ public class linkedlist {
     }
     public static void main (String[]args){
         linkedlist list = new linkedlist();
+        System.out.println("Linkedlist before deleting of Node.");
         list = insert(list, 1);
         list = insert(list, 2);
         list = insert(list, 3);
         list = insert(list, 4);
         list = insert(list, 5);
         list = insert(list, 6);
+        Print(list);
+        System.out.println("\n___________________\n");
+        System.out.println("After deletion of 4.");
+        list.deleteNode(4);
         Print(list);
     }
 }
