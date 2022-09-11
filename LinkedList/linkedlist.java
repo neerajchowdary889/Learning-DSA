@@ -14,6 +14,15 @@ public class linkedlist {
         new_node.next = head;
         head = new_node; // To push anything to the head of the Linkedlist.
     }
+    public void insertafter(Node prevNode, int data){
+        if(prevNode == null){
+            System.out.println("Null");
+            return;
+        }
+        Node new_node = new Node(data);
+        new_node.next = prevNode.next;
+        prevNode.next = new_node;
+    }
     public static linkedlist insert(linkedlist list, int data){
         Node new_node = new Node(data);
         new_node.next = null;
