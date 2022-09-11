@@ -9,6 +9,11 @@ public class linkedlist {
             next = null;
         }
     }
+    public void push(int data){
+        Node new_node = new Node(data);
+        new_node.next = head;
+        head = new_node; // To push anything to the head of the Linkedlist.
+    }
     public static linkedlist insert(linkedlist list, int data){
         Node new_node = new Node(data);
         new_node.next = null;
