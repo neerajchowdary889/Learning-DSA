@@ -57,7 +57,7 @@ public class linkedlist {
     public static void Print(linkedlist list){
         Node currNode = list.head;
         while(currNode != null){
-            System.out.println(currNode.data + " ");
+            System.out.print(currNode.data + " ");
             currNode = currNode.next;
         }
     }
