@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SingleLinkedlist;
 public class linkedlist {
     Node head;
     static class Node{

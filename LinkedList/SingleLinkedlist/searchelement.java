@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SingleLinkedlist;
 
 public class searchelement {
     static Node head;
