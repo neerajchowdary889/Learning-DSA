@@ -60,6 +60,9 @@ public class searchDoubly {
         if(SCurr != null && SCurr.data == key){
             issearch = true;
             System.out.println(issearch);
+            Instant end1 = Instant.now();
+            Duration timeElapsed1 = Duration.between(start, end1);
+            System.out.println(timeElapsed1);
             return;
         }
         else if(SRCurr != null && SRCurr.data == key) {
@@ -131,10 +134,11 @@ public class searchDoubly {
         list.Insert(7);
         list.Insert(8);
         list.Insert(9);
-        list.Insert(10);
+        list.Insert(101);
         list.Insert(11);
         Print();
-        search(122);
-        find(122);
+        search(1);
+//Dont know why searching from both ends taking more time than searching from one end like singly linkedlist.
+        find(101);
     }
 }
