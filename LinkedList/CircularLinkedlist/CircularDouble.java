@@ -66,10 +66,32 @@ public class CircularDouble {
             }
         }
     }
+    public static void delete(int key){
+        Node delete = head;
+        Node deletiontemp = null;
+        Node deletiontempB = null;
+        if(head != null && head.data == key){
+            deletiontemp = delete.next;
+            tail.next = deletiontemp;
+            deletiontemp.prev = tail;
+            head = deletiontemp;
+        }
+        else{
+            while(delete != null && delete.data != key){
+                deletiontempB = delete;
+                delete = delete.next;
+                deletiontemp = delete.next;
+            }
+
+        }
+    }
     public static void main(String[]args){
         CircularDouble list = new CircularDouble();
         list.insert(1);
         list.insert(2);
-        Print("b");
+        list.insert(3);
+        list.insert(4);
+        delete(1);
+        Print("f");
     }
 }
