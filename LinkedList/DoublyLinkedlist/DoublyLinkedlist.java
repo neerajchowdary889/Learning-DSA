@@ -64,7 +64,6 @@ public class DoublyLinkedlist {
                 Rcurr = Rcurr.prev;
             }
         }
-
     }
     public static void main(String[]args){
         DoublyLinkedlist list = new DoublyLinkedlist();
