@@ -33,10 +33,28 @@ public class CircularSingle {
         }
         if(print.next == head){
             System.out.print(print.data + "  -- END");
+            return;
         }
     }
     public static void delete(int key){
-
+        Node delete = head;
+        if(head != null && head.data == key){
+            Node last = head;
+            while(last != null && last.next != head){
+                last = last.next;
+            }
+            last.next = head.next;
+            head = last.next;
+        }
+        else{
+            Node last = head;
+            Node Back = null;
+            while(last != null && last.data != key){
+                Back = last;
+                last = last.next;
+            }
+            Back.next = last.next;
+        }
     }
     public static void main(String[]args){
         CircularSingle list = new CircularSingle();
@@ -44,6 +62,8 @@ public class CircularSingle {
         list.insert(2);
         list.insert(3);
         list.insert(4);
+        list.insert(5);
+        delete(3);
         Print();
     }
 }
