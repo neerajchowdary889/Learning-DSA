@@ -35,6 +35,9 @@ public class CircularSingle {
             System.out.print(print.data + "  -- END");
         }
     }
+    public static void delete(int key){
+
+    }
     public static void main(String[]args){
         CircularSingle list = new CircularSingle();
         list.insert(1);
