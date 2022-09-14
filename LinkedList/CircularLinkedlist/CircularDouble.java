@@ -47,7 +47,7 @@ public class CircularDouble {
                     System.out.print(curr.data + " ");
                     curr = curr.next;
                     if (curr == tail) {
-                        System.out.print("" + curr.data);
+                        System.out.print(curr.data+ "  -- END");
                         return;
                     }
                 }
@@ -59,7 +59,7 @@ public class CircularDouble {
                     System.out.print(Rcurr.data + " ");
                     Rcurr = Rcurr.prev;
                     if(Rcurr == head){
-                        System.out.println(Rcurr.data);
+                        System.out.println(Rcurr.data+ "  -- END");
                         return;
                     }
                 }
@@ -82,7 +82,8 @@ public class CircularDouble {
                 delete = delete.next;
                 deletiontemp = delete.next;
             }
-
+            deletiontempB.next = delete.next;
+            deletiontemp.prev = delete.prev;
         }
     }
     public static void main(String[]args){
@@ -90,8 +91,12 @@ public class CircularDouble {
         list.insert(1);
         list.insert(2);
         list.insert(3);
+        list.insert(0);
         list.insert(4);
-        delete(1);
+        list.insert(5);
+        delete(0);
         Print("f");
+        System.out.println(" ");
+        Print("b");
     }
 }
