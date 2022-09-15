@@ -20,6 +20,20 @@ public class stack {
         }
         else{
             data[top++] = value;
+            System.out.println(value+" Pushed to stack.");
+            return;
         }
     }
+    public static void pop(){
+        if(top < 0){
+            System.out.println("StackUnderflow");
+            return;
+        }
+        else{
+            int key  = data[top--];
+            System.out.println(key+" is Popped out from stack.");
+            return;
+        }
+    }
+    
 }
