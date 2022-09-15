@@ -82,9 +82,9 @@ public class CircularSingle {
         list.insert(2);
         list.insert(3);
         list.insert(4);
-        list.insert(5);
+        list.insert(6);
         Search(6);
-        Search(1);
+        Search(5); // it return nothing.
 //        Search(2);
 //        Search(3);
 //        Search(4);

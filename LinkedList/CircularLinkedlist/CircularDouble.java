@@ -86,7 +86,27 @@ public class CircularDouble {
             deletiontemp.prev = delete.prev;
         }
     }
-    public static void main(String[]args){
+    public static void Search(int key) {
+        Node search = head;
+        boolean isTrue = false;
+        if (search != null && search.data == key) {
+            isTrue = true;
+            System.out.println(isTrue);
+            return;
+        }
+        while (search != null && search.data != key) {
+            search = search.next;
+            if (search != null && search == head) {
+                return;
+            }
+        }
+        if (search == null) {
+            return;
+        }
+        isTrue = true;
+        System.out.println(isTrue);
+    }
+        public static void main(String[]args){
         CircularDouble list = new CircularDouble();
         list.insert(1);
         list.insert(2);
@@ -94,6 +114,8 @@ public class CircularDouble {
         list.insert(0);
         list.insert(4);
         list.insert(5);
+        Search(6); // it return nothing because 6 was not in list.
+        Search(1);
         delete(0);
         Print("f");
         System.out.println(" ");
