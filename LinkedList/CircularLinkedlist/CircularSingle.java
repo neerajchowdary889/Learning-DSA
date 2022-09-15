@@ -1,6 +1,6 @@
 package LinkedList.CircularLinkedlist;
 
-//
+//Single circular linkedlist
 public class CircularSingle {
     static Node head;
     static class Node{
