@@ -1,7 +1,5 @@
 package LinkedList.CircularLinkedlist;
 
-import LinkedList.DoublyLinkedlist.DoublyLinkedlist;
-
 //Double circular linkedlist
 public class CircularDouble {
     static Node head;
