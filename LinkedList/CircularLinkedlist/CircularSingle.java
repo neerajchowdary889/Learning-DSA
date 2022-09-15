@@ -56,6 +56,26 @@ public class CircularSingle {
             Back.next = last.next;
         }
     }
+    public static void Search(int key){
+        Node search = head;
+        boolean isTrue = false;
+        if(search != null && search.data == key){
+            isTrue = true;
+            System.out.println(isTrue);
+            return;
+        }
+        while(search != null && search.data != key){
+            search = search.next;
+            if(search != null && search == head){
+                return;
+            }
+        }
+        if(search == null){
+            return;
+        }
+        isTrue = true;
+        System.out.println(isTrue);
+    }
     public static void main(String[]args){
         CircularSingle list = new CircularSingle();
         list.insert(1);
@@ -63,6 +83,12 @@ public class CircularSingle {
         list.insert(3);
         list.insert(4);
         list.insert(5);
+        Search(6);
+        Search(1);
+//        Search(2);
+//        Search(3);
+//        Search(4);
+//        Search(5);
         delete(3);
         Print();
     }
