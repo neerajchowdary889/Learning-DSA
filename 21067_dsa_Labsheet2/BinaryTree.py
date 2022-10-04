@@ -26,19 +26,6 @@ def preorder(temp):
     preorder(temp.left)
     preorder(temp.right)
 
-# root = newNode(1)
-# root.left = newNode(12)
-# root.left.left = newNode(5)
-# root.right = newNode(9)
-# root.left.right = newNode(6)
-
-# root = newNode(1)
-# root.left = newNode(2)
-# root.left.left = newNode(4)
-# root.right = newNode(3)
-# root.left.right = newNode(5)
-# root.left.right.left = newNode(6)
-# root.left.right.right = newNode(7)
 
 root = newNode(1)
 root.left = newNode(2)
