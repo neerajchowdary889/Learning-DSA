@@ -3,6 +3,7 @@ class newNode():
         self.key = data
         self.left = None
         self.right = None
+
 def inorder(temp):
     if (not temp):
         return
@@ -11,21 +12,17 @@ def inorder(temp):
     print(temp.key, end=" ")
     inorder(temp.right)
 
-def findADepth(node):
-    d = 0
-    while (node != None):
-        d += 1
-        node = node.left
-    return d
-def isPerfectBinaryTree(root, leafnode):
+def isPerfectBinaryTree(root, leaf = 0):
     if (root is None):
         return True
     if (root.left == None and root.right == None):
-         leafnode = leafnode+1
+        return (leaf+1)
     if(root.left == None or root.right == None):
         return False
-    print(leafnode)
-    return (isPerfectBinaryTree(root.left) and isPerfectBinaryTree(root.right), leafnode)
+    return (isPerfectBinaryTree(root.left,leaf) and isPerfectBinaryTree(root.right,leaf))
+
+def perfect(root):
+    return isPerfectBinaryTree(root)
 
 root = newNode(1)
 root.left = newNode(12)
@@ -35,8 +32,10 @@ root.right = newNode(9)
 root.right.left = newNode(8)
 root.right.right = newNode(16)
 
+print("BinaryTree is: ",end="")
+inorder(root)
 
-if(isPerfectBinaryTree(root)):
-    print("Perfect")
+if(perfect(root)):
+    print("\nPerfect BinaryTree")
 else:
-    print("Fuck")
+    print("\nNot a Perfect BinaryTree")
