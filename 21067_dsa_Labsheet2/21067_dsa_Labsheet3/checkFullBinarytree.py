@@ -45,6 +45,6 @@ print("BinaryTree is: ",end="")
 inorder(root)
 
 if(isFullBinaryTree(root)):
-    print("\nFull BinaryTree")
+    print("\nIt is Full BinaryTree")
 else:
     print("\nNot a Full BinaryTree")
