@@ -9,17 +9,15 @@ graph = {
 
 visited = []
 queue = []
-
 def bfs(node):
     visited.append(node)
     queue.append(node)
-
-    while(queue):
-        temp = queue.pop(0)
-        print(temp, end=" --> ")
-
-        for neighbour in graph[temp]:
+    while queue:
+        m = queue.pop(0)
+        print(m)
+        for neighbour in graph[m]:
             if neighbour not in visited:
+                
                 visited.append(neighbour)
                 queue.append(neighbour)
 

@@ -14,5 +14,4 @@ def dfs(node):
         visited.add(node)
         for neighbour in graph[node]:
             dfs(neighbour)
-
 dfs('5')
